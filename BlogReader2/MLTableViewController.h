@@ -2,8 +2,8 @@
 //  MLTableViewController.h
 //  BlogReader2
 //
-//  Created by Soledad Liquori on 9/18/14.
-//  Copyright (c) 2014 Michael Liquori. All rights reserved.
+//  Created by Michael Liquori on 9/18/14.
+//  Copyright (c) 2014 Team Treehouse. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -20,6 +20,7 @@
 		0206B78F19CB7043003DD0DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0206B78D19CB7043003DD0DE /* InfoPlist.strings */; };
 		0206B79119CB7043003DD0DE /* BlogReader2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0206B79019CB7043003DD0DE /* BlogReader2Tests.m */; };
 		0206B79B19CB709A003DD0DE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0206B79A19CB709A003DD0DE /* MainStoryboard.storyboard */; };
+		0216395619CC805B00709F3C /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0216395519CC805B00709F3C /* BlogPost.m */; };
 		02B5AA4119CBBFA7003BC53C /* MLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,8 @@
 		0206B78E19CB7043003DD0DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0206B79019CB7043003DD0DE /* BlogReader2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlogReader2Tests.m; sourceTree = "<group>"; };
 		0206B79A19CB709A003DD0DE /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		0216395419CC805B00709F3C /* BlogPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogPost.h; sourceTree = "<group>"; };
+		0216395519CC805B00709F3C /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		02B5AA3F19CBBFA7003BC53C /* MLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTableViewController.h; sourceTree = "<group>"; };
 		02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +115,8 @@
 		0206B77119CB7043003DD0DE /* BlogReader2 */ = {
 			isa = PBXGroup;
 			children = (
+				0216395419CC805B00709F3C /* BlogPost.h */,
+				0216395519CC805B00709F3C /* BlogPost.m */,
 				02B5AA3F19CBBFA7003BC53C /* MLTableViewController.h */,
 				02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */,
 				0206B77A19CB7043003DD0DE /* MLAppDelegate.h */,
@@ -252,6 +257,7 @@
 				0206B77819CB7043003DD0DE /* main.m in Sources */,
 				02B5AA4119CBBFA7003BC53C /* MLTableViewController.m in Sources */,
 				0206B77C19CB7043003DD0DE /* MLAppDelegate.m in Sources */,
+				0216395619CC805B00709F3C /* BlogPost.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

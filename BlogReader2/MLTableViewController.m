@@ -2,11 +2,12 @@
 //  MLTableViewController.m
 //  BlogReader2
 //
-//  Created by Soledad Liquori on 9/18/14.
-//  Copyright (c) 2014 Michael Liquori. All rights reserved.
+//  Created by Michael Liquori on 9/18/14.
+//  Copyright (c) 2014 Team Treehouse. All rights reserved.
 //
 
 #import "MLTableViewController.h"
+#import "BlogPost.h"
 
 @interface MLTableViewController ()
 
@@ -26,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    BlogPost *blogPost = [[BlogPost alloc] init];
+    blogPost.title = @"some title";
+    blogPost.author = @"some author";
     
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
