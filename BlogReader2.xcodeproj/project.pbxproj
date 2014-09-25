@@ -22,6 +22,7 @@
 		0206B79B19CB709A003DD0DE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0206B79A19CB709A003DD0DE /* MainStoryboard.storyboard */; };
 		0216395619CC805B00709F3C /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0216395519CC805B00709F3C /* BlogPost.m */; };
 		02B5AA4119CBBFA7003BC53C /* MLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */; };
+		0436B7BD19D38A8600AF605A /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0436B7BC19D38A8600AF605A /* treehouse.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		0216395519CC805B00709F3C /* BlogPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogPost.m; sourceTree = "<group>"; };
 		02B5AA3F19CBBFA7003BC53C /* MLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTableViewController.h; sourceTree = "<group>"; };
 		02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewController.m; sourceTree = "<group>"; };
+		0436B7BC19D38A8600AF605A /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treehouse.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		0206B77219CB7043003DD0DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0436B7BC19D38A8600AF605A /* treehouse.png */,
 				0206B77319CB7043003DD0DE /* BlogReader2-Info.plist */,
 				0206B77419CB7043003DD0DE /* InfoPlist.strings */,
 				0206B77719CB7043003DD0DE /* main.m */,
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0436B7BD19D38A8600AF605A /* treehouse.png in Resources */,
 				0206B77619CB7043003DD0DE /* InfoPlist.strings in Resources */,
 				0206B77E19CB7043003DD0DE /* Images.xcassets in Resources */,
 				0206B79B19CB709A003DD0DE /* MainStoryboard.storyboard in Resources */,

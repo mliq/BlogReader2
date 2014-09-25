@@ -27,10 +27,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    BlogPost *blogPost = [[BlogPost alloc] init];
-    blogPost.title = @"some title";
-    blogPost.author = @"some author";
+
+//    BlogPost *bp = [[BlogPost alloc] initWithTitle:@"some title"];
+//    bp.author = @"author";
+//    
+//    BlogPost *bp1 = [BlogPost blogPostWithTitle:@"another title"];
+//    bp1.author = @"Amit";
     
+//    BlogPost *blogPost = [[BlogPost alloc] init];
+//    blogPost.title = @"some title";
+//    blogPost.author = @"some author";
+//    
     NSURL *blogURL = [NSURL URLWithString:@"http://blog.teamtreehouse.com/api/get_recent_summary"];
     
     NSData *jsonData = [NSData dataWithContentsOfURL:blogURL];
@@ -38,8 +45,19 @@
     NSError *error = nil;
     
     NSDictionary *dataDictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:&error];
+    NSLog(@"%@",dataDictionary);
     
-    self.blogPosts = [dataDictionary objectForKey:@"posts"];
+    self.blogPosts = [NSMutableArray array];
+    
+    NSArray *blogPostsArray = [dataDictionary objectForKey:@"posts"];
+    
+    for (NSDictionary *bpDictionary in blogPostsArray) {
+        BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
+        blogPost.author = [bpDictionary objectForKey:@"author"];
+        blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        [self.blogPosts addObject:blogPost];
+    }
+//    self.blogPosts = [dataDictionary objectForKey:@"posts"];
 
     //    NSDictionary *blogPost1 = [NSDictionary dictionaryWithObjectsAndKeys:@"test1", @"title",@"Michael Liquori", @"author", nil];
     //    NSDictionary *blogPost2 = [NSDictionary dictionaryWithObjectsAndKeys:@"test2", @"title",@"Michael Liquori", @"author", nil];
@@ -78,11 +96,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     
-    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+    NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    cell.textLabel.text = blogPost.title;
+    cell.detailTextLabel.text = blogPost.author;
+    cell.imageView.image = image;
+
+    //    cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
+//    UIImage *image = [UIImage imageNamed: @"placeholder.png"];
+    
+    //    NSDictionary *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
     // Configure the cell...
-    cell.textLabel.text = [blogPost valueForKey:@"title"];
-    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
+//    cell.textLabel.text = [blogPost valueForKey:@"title"];
+//    cell.detailTextLabel.text = [blogPost valueForKey:@"author"];
     return cell;
 }
 

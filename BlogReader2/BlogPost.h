@@ -12,6 +12,13 @@
 
 @property (nonatomic,strong) NSString *title;
 @property (nonatomic,strong) NSString *author;
+@property (nonatomic,strong) NSString *thumbnail;
+
+//Designated Initializer
+- (id) initWithTitle:(NSString *)title;
++ blogPostWithTitle:(NSString *)title;
+
+-(NSURL *) thumbnailURL;
 
 //{
 //    NSString *title;

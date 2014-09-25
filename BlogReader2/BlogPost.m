@@ -10,6 +10,24 @@
 
 @implementation BlogPost
 
+- (id) initWithTitle:(NSString *)title {
+    self= [super init]; // initialize
+    if (self){ //Check if valid instance was created
+        self.title=title;
+        self.author = nil;
+        self.thumbnail=nil;
+    }
+    return self; // return initialized value
+}
+
++ (id) blogPostWithTitle:(NSString *)title {
+    return [[self alloc] initWithTitle:title];
+}
+
+-(NSURL *) thumbnailURL{
+    return [NSURL URLWithString:self.thumbnail];
+}
+
 //- (void) setTitle:(NSString *)_title {
 //    title = _title;
 //}
