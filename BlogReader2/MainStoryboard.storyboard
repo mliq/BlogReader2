@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ybO-Ml-Afe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GNR-9H-1um">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -13,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="dCj-hW-NDb" detailTextLabel="kV7-IR-Zf8" style="IBUITableViewCellStyleSubtitle" id="xF4-Dg-86Q">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="dCj-hW-NDb" detailTextLabel="kV7-IR-Zf8" style="IBUITableViewCellStyleSubtitle" id="xF4-Dg-86Q">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xF4-Dg-86Q" id="s2P-xM-WCw">
@@ -36,6 +37,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zbp-mI-UCz" kind="push" identifier="showBlogPost" id="fca-6z-0FK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,8 +47,55 @@
                             <outlet property="delegate" destination="ybO-Ml-Afe" id="0wI-d3-Xow"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="ISg-Aj-vYo"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM2-hd-zYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="-270"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="TiO-cv-OHw">
+            <objects>
+                <viewController id="zbp-mI-UCz" customClass="MLWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ku0-QY-8n4"/>
+                        <viewControllerLayoutGuide type="bottom" id="JhV-Hi-mWv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XiL-ck-fRS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BEt-5a-DV6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ol-Of-wg9"/>
+                    <connections>
+                        <outlet property="webView" destination="BEt-5a-DV6" id="dTd-1p-xRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtk-nB-bBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-73" y="-264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7sB-FD-q5h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GNR-9H-1um" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OyC-KH-tKb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ybO-Ml-Afe" kind="relationship" relationship="rootViewController" id="nfk-E6-76t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79y-4T-U7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-988" y="-270"/>
         </scene>

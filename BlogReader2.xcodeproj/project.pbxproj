@@ -23,6 +23,7 @@
 		0216395619CC805B00709F3C /* BlogPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0216395519CC805B00709F3C /* BlogPost.m */; };
 		02B5AA4119CBBFA7003BC53C /* MLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */; };
 		0436B7BD19D38A8600AF605A /* treehouse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0436B7BC19D38A8600AF605A /* treehouse.png */; };
+		048FEB2C19D4B2330017BA04 /* MLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048FEB2B19D4B2330017BA04 /* MLWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		02B5AA3F19CBBFA7003BC53C /* MLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLTableViewController.h; sourceTree = "<group>"; };
 		02B5AA4019CBBFA7003BC53C /* MLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLTableViewController.m; sourceTree = "<group>"; };
 		0436B7BC19D38A8600AF605A /* treehouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = treehouse.png; sourceTree = "<group>"; };
+		048FEB2A19D4B2330017BA04 /* MLWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLWebViewController.h; sourceTree = "<group>"; };
+		048FEB2B19D4B2330017BA04 /* MLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +129,8 @@
 				0206B77D19CB7043003DD0DE /* Images.xcassets */,
 				0206B77219CB7043003DD0DE /* Supporting Files */,
 				0206B79A19CB709A003DD0DE /* MainStoryboard.storyboard */,
+				048FEB2A19D4B2330017BA04 /* MLWebViewController.h */,
+				048FEB2B19D4B2330017BA04 /* MLWebViewController.m */,
 			);
 			path = BlogReader2;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			files = (
 				0206B77819CB7043003DD0DE /* main.m in Sources */,
 				02B5AA4119CBBFA7003BC53C /* MLTableViewController.m in Sources */,
+				048FEB2C19D4B2330017BA04 /* MLWebViewController.m in Sources */,
 				0206B77C19CB7043003DD0DE /* MLAppDelegate.m in Sources */,
 				0216395619CC805B00709F3C /* BlogPost.m in Sources */,
 			);
