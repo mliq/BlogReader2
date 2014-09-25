@@ -55,6 +55,7 @@
         BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
         blogPost.author = [bpDictionary objectForKey:@"author"];
         blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
+        blogPost.date = [bpDictionary objectForKey:@"date"];
         [self.blogPosts addObject:blogPost];
     }
 //    self.blogPosts = [dataDictionary objectForKey:@"posts"];
@@ -101,8 +102,10 @@
     NSData *imageData = [NSData dataWithContentsOfURL:blogPost.thumbnailURL];
     UIImage *image = [UIImage imageWithData:imageData];
     cell.textLabel.text = blogPost.title;
-    cell.detailTextLabel.text = blogPost.author;
+//    cell.detailTextLabel.text = blogPost.author;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ %@",blogPost.author,[blogPost formattedDate]];
     cell.imageView.image = image;
+
 
     //    cell.imageView.image = [UIImage imageNamed:@"treehouse.png"];
 //    UIImage *image = [UIImage imageNamed: @"placeholder.png"];
