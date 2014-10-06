@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSURL *url = [NSURL URLWithString:@"http://blog.teamtreehouse.com"];
-    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
+//    NSURL *url = [NSURL URLWithString:@"http://blog.teamtreehouse.com"];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:self.blogPostURL];
     [self.webView loadRequest:urlRequest];
 }
 

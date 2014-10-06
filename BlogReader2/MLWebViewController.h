@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MLWebViewController : UIViewController
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
 
+@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (strong,nonatomic) NSURL *blogPostURL;
 @end

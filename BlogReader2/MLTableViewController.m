@@ -8,6 +8,7 @@
 
 #import "MLTableViewController.h"
 #import "BlogPost.h"
+#import "MLWebViewController.h"
 
 @interface MLTableViewController ()
 
@@ -124,6 +125,12 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"preparing for segue: %@",segue.identifier);
+    
+    if( [segue.identifier isEqualToString:@"showBlogPost"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+        [segue.destinationViewController setBlogPostURL:blogPost.url];
+    }
 }
 
 
